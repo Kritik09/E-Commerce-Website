@@ -12,13 +12,13 @@
     <title>REGISTER - Next Shop</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/form.css">
-    <link rel="stylesheet" href="../static/css/owl.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+    <link rel="stylesheet" th:href="@{/css/owl.css}" href="../static/css/owl.css">
+    <link rel="stylesheet" th:href="@{/css/form.css}" href="../static/css/form.css">
 
 </head>
 
@@ -116,17 +116,17 @@
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="../static/jquery/jquery.min.js"></script>
-    <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/jquery/jquery.min.js}" src="../static/jquery/jquery.min.js"></script>
+    <script th:src="@{/bootstrap/js/bootstrap.bundle.min.js}" src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- Additional Scripts -->
-    <script src="../static/js/custom.js"></script>
-    <script src="../static/js/owl.js"></script>
-    <script src="../static/js/slick.js"></script>
-    <script src="../static/js/isotope.js"></script>
-    <script src="../static/js/accordions.js"></script>
-    <script src="../static/js/main.js"></script>
+    <script th:src="@{/js/custom.js}" src="../static/js/custom.js"></script>
+    <script th:src="@{/js/owl.js}" src="../static/js/owl.js"></script>
+    <script th:src="@{/js/slick.js}" src="../static/js/slick.js"></script>
+    <script th:src="@{/js/isotope.js}" src="../static/js/isotope.js"></script>
+    <script th:src="@{/js/accordions.js}" src="../static/js/accordions.js"></script>
+    <script th:src="@{/js/main.js}" src="../static/js/main.js"></script>
 
 </body>
 
