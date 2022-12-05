@@ -93,6 +93,10 @@ a.filled-button:hover {
 	background-image: url(../images/contact-heading.jpg);
 }
 
+.admin-heading {
+	background-image: url(../images/admin-heading.jpg);
+}
+
 .page-heading {
 	padding: 210px 0px 130px 0px;
 	text-align: center;
@@ -940,6 +944,11 @@ footer .inner-content p a {
 		position: absolute!important;
 		top: 30px!important;
 		right: 30px!important;
+	}
+	.product-item .down-content span {
+		position: absolute!important;
+		right: 30px!important;
+		bottom: 30px!important;
 	}
 	.best-features .left-content {
 		margin-bottom: 30px;
