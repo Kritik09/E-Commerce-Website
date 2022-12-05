@@ -62,9 +62,6 @@
             <h2 th:text="${product.name}">Rice</h2>
             <p th:text="${product.category.name}">Kitchen Use</p>
             <h2>₹ <span th:text="${product.price}">1050</span></h2>
-            <h5>Weight:
-                <spna th:text="${product.weight}">100000</spna> grams.
-            </h5>
             <p th:text="${product.description}">hgj ugd wd dgqwd diuqgd i wdqiwu</p>
             <a href="" th:href="@{/addToCart/{id}(id = ${product.id})}" class="btn btn-primary">Add to cart</a>
         </div>
