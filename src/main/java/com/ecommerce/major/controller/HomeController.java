@@ -1,5 +1,6 @@
 package com.ecommerce.major.controller;
 
+import com.ecommerce.major.global.GlobalData;
 import com.ecommerce.major.service.CategoryService;
 import com.ecommerce.major.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,10 +18,12 @@ public class HomeController {
 
     @GetMapping({"/", "/home"})
     public String home(Model model){
+        model.addAttribute("cartCount", GlobalData.cart.size());
         return "index";
     }
     @GetMapping("/shop")
     public String shop(Model model){
+        model.addAttribute("cartCount",GlobalData.cart.size());
         model.addAttribute("categories",categoryService.getAllCategory());
         model.addAttribute("products",productService.getAllProduct());
         return "shop";
@@ -29,12 +32,14 @@ public class HomeController {
     public String shopByCategory(Model model, @PathVariable int id){
         model.addAttribute("categories",categoryService.getAllCategory());
         model.addAttribute("products",productService.getAllProductsByCategoryId(id));
+        model.addAttribute("cartCount",GlobalData.cart.size());
         return "shop";
     }
 
     @GetMapping("/shop/viewproduct/{id}")
     public String viewProduct(Model model,@PathVariable long id){
         model.addAttribute("product",productService.getProductById(id).get());
+        model.addAttribute("cartCount",GlobalData.cart.size());
         return "viewProduct";
     }
 }

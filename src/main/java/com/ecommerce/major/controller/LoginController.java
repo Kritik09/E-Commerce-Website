@@ -1,5 +1,6 @@
 package com.ecommerce.major.controller;
 
+import com.ecommerce.major.global.GlobalData;
 import com.ecommerce.major.model.Role;
 import com.ecommerce.major.model.User;
 import com.ecommerce.major.repository.RoleRepository;
@@ -26,6 +27,7 @@ public class LoginController {
     RoleRepository roleRepository;
     @GetMapping("/login")
     public String getLogin(){
+        GlobalData.cart.clear();
         return "login";
     }
 
